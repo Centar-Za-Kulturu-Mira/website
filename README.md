@@ -6,8 +6,6 @@ Based on [Eleventy](https://www.11ty.dev/).
 
 ## Getting Started
 
-* [Want a more generic/detailed getting started guide?](https://www.11ty.dev/docs/getting-started/)
-
 1. Install dependencies
 
 ```
