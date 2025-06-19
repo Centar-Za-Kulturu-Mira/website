@@ -1,0 +1,43 @@
+# Configuration for Decap CMS
+
+# Specifies the backend. In this case, it's your GitHub repository.
+# The 'main' branch is specified, but you can change it to 'master' if that's your default.
+backend:
+  name: github
+  repo: Centar-Za-Kulturu-Mira/website
+  branch: main
+
+# This setting enables the full editorial workflow, including drafts and publishing.
+# It's required for the GitHub backend with Netlify Identity.
+publish_mode: editorial_workflow
+
+# Media and Public Folders
+# This tells Decap CMS where to store uploaded media files.
+media_folder: "content/gallery/images"
+# This tells Decap CMS what the public-facing URL path is for the media folder.
+public_folder: "/gallery/images"
+
+# Collections define the content types that your admin can edit.
+collections:
+  # Collection for all blog posts located in 'content/blog'
+  - name: "blog"
+    label: "Blog Posts"
+    folder: "content/blog"
+    create: true
+    slug: "{{slug}}" # Uses the title to create the filename, e.g., 'thirdpost.md'
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string", required: false }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Tags", name: "tags", widget: "list", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  # A "Files Collection" for managing individual pages like 'about.md'
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "content/about.md"
+        label: "About Us Page"
+        name: "about"
+        fields:
+          - { label: "Body", name: "body", widget: "markdown" }
