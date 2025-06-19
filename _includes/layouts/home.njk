@@ -1,0 +1,22 @@
+---
+layout: layouts/base.njk
+---
+
+{% if page.url == "/" %}
+  <div class="homepage-hero">
+    <img src="/img/pigeon.svg" alt="Centar Za Kulturu Mira" class="hero-image">
+  </div>
+{% endif %}
+
+{{ content | safe }}
+
+<style>
+  .homepage-hero {
+    margin: -2rem -1rem 2rem;
+  }
+  .hero-image {
+    width: 50% !important;
+    height: 400px;
+    object-fit: cover;
+  }
+</style>

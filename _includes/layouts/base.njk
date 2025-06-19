@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="{{ metadata.language }}">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{{ title or metadata.title }}</title>
+		<meta name="description" content="{{ description or metadata.description }}">
+		<link rel="alternate" href="feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
+
+		{#- Uncomment this if you’d like folks to know that you used Eleventy to build your site!  #}
+		{#- <meta name="generator" content="{{ eleventy.generator }}"> #}
+
+		{#-
+		Plain-text bundles are provided via the `eleventy-plugin-bundle` plugin:
+		1. CSS:
+			* Add to a per-page bundle using `{% css %}{% endcss %}`
+			* Retrieve bundle content using `{% getBundle "css" %}` or `{% getBundleFileUrl "css" %}`
+		2. Or for JavaScript:
+			* Add to a per-page bundle using `{% js %}{% endjs %}`
+			* Retrieve via `{% getBundle "js" %}` or `{% getBundleFileUrl "js" %}`
+		3. Learn more: https://github.com/11ty/eleventy-plugin-bundle
+		#}
+
+		{#- Add an arbitrary string to the bundle #}
+		{%- css %}/* This is an arbitrary CSS string added to the bundle */{% endcss %}
+		{#- Add the contents of a file to the bundle #}
+		{%- css %}{% include "public/css/index.css" %}{% endcss %}
+		{#- Or you can add from node_modules #}
+		{# {%- css %}{% include "node_modules/prismjs/themes/prism-okaidia.css" %}{% endcss %} #}
+
+		{#- Render the CSS bundle using inlined CSS (for the fastest site performance in production) #}
+		<style>{% getBundle "css" %}</style>
+		{#- Renders the CSS bundle using a separate file, if you can't set CSP directive style-src: 'unsafe-inline' #}
+		{#- <link rel="stylesheet" href="{% getBundleFileUrl "css" %}"> #}
+
+		{#- Add the heading-anchors web component to the JavaScript bundle #}
+		{%- js %}{% include "node_modules/@zachleat/heading-anchors/heading-anchors.js" %}{% endjs %}
+
+		<style>
+			/* Tooltip hidden by default */
+			.tooltip-text {
+			opacity: 0;
+			visibility: hidden;
+			position: absolute;
+			background-color: black;
+			color: white;
+			padding: 5px 10px;
+			border-radius: 5px;
+			font-size: 14px;
+			transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+			top: -20px; /* Adjust this to move the tooltip above the trigger */
+			right: 100px; /* Align with the left side of the trigger */
+			transform: translateY(-100%); /* Position the tooltip above the trigger */
+			}
+
+			#tooltip-trigger {
+			cursor: pointer;
+			text-decoration: underline;
+			position: relative; /* Ensure the tooltip is positioned relative to the trigger */
+			}
+		</style>
+	</head>
+	<body>
+		<a href="#skip" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">{{ metadata.title }}</a>
+
+			{#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
+			<nav>
+				<h2 class="visually-hidden">Top level navigation menu</h2>
+				<ul class="nav">
+				{%- for entry in collections.all | eleventyNavigation %}
+					<li class="nav-item"><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
+				{%- endfor %}
+				</ul>
+			</nav>
+		</header>
+
+		<main id="skip">
+			<heading-anchors>
+				{{ content | safe }}
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p><em><a href="mailto:galagrey@yahoo.com">Email</a></em></p>
+			<p><em><a href="https://wa.me/+381645381063">WhatsApp</a></em></p>
+			<p><em><a href="https://google.com">Donate</a></em></p>
+			<p id="tooltip-trigger">
+				<em>200-3902120101047-47</em>
+				<span class="tooltip-text">Matični broj: 28343655<br>PIB:113097636</span>
+			</p>
+		</footer>
+
+		<!-- This page `{{ page.url }}` was built on {% currentBuildDate %} -->
+		<script type="module" src="{% getBundleFileUrl "js" %}"></script>
+
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+				const trigger = document.getElementById("tooltip-trigger");
+				const tooltip = trigger.querySelector(".tooltip-text");
+
+				function closeTooltip(e) {
+					if (!trigger.contains(e.target) && !tooltip.contains(e.target)) {
+						tooltip.style.opacity = "0";
+						tooltip.style.visibility = "hidden";
+					}
+				}
+
+				trigger.addEventListener("click", function (event) {
+					const isVisible = tooltip.style.opacity === "1";
+
+					tooltip.style.opacity = isVisible ? "0" : "1";
+					tooltip.style.visibility = isVisible ? "hidden" : "visible";
+
+					if (!isVisible) {
+						document.addEventListener("click", closeTooltip);
+					} else {
+						document.removeEventListener("click", closeTooltip);
+					}
+				});
+			});
+		</script>
+	</body>
+</html>

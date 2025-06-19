@@ -1,0 +1,30 @@
+---js
+const eleventyNavigation = {
+    key: "Galerija",
+    order: 4
+};
+---
+
+<h1>Galerija</h1>
+
+<div class="gallery-grid">
+{% for image in gallery %}
+  <div class="gallery-item">
+    <img src="{{ image.url }}" alt="{{ image.alt }}" loading="lazy">
+  </div>
+{% endfor %}
+</div>
+
+<style>
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+  }
+  .gallery-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+</style>
