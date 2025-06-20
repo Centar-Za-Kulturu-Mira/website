@@ -1,12 +1,12 @@
 export default {
 	title: "Centar Za Kulturu Mira",
-	url: "https://ckm-cyan.vercel.app/",
+	url: "https://ckm.org.rs",
 	language: "en",
 	description: "Naša Internet kuća za Centar Za Kulturu Mira",
 	generator: "Dragana Mitrović",
 	author: {
 		name: "Dragana Mitrović",
-		email: "galagrey@yahoo.com",
-		url: "https://ckm-cyan.vercel.app/",
+		email: "info@ckm.org.rs",
+		url: "https://ckm.org.rs",
 	}
 }

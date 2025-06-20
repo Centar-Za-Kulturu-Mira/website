@@ -67,7 +67,7 @@ export default async function(eleventyConfig) {
 			language: "en",
 			title: "Centar Za Kulturu Mira",
 			subtitle: "Naša Internet kuća za Centar Za Kulturu Mira.",
-			base: "https://ckm-cyan.vercel.app/",
+			base: "https://ckm.org.rs",
 			author: {
 				name: "Dragana Mitrović"
 			}

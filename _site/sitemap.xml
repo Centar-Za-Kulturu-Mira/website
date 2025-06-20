@@ -2,57 +2,57 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 	
 	<url>
-		<loc>https://ckm-cyan.vercel.app/blog/secondpost/</loc>
+		<loc>https://ckm.org.rsblog/secondpost/</loc>
 		<lastmod>2018-07-04</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://ckm-cyan.vercel.app/blog/fourthpost/</loc>
+		<loc>https://ckm.org.rsblog/fourthpost/</loc>
 		<lastmod>2018-09-30</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://ckm-cyan.vercel.app/blog/fifthpost/</loc>
+		<loc>https://ckm.org.rsblog/fifthpost/</loc>
 		<lastmod>2023-01-23</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://ckm-cyan.vercel.app/blog/thirdpost/</loc>
+		<loc>https://ckm.org.rsblog/thirdpost/</loc>
 		<lastmod>2024-11-24</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://ckm-cyan.vercel.app/blog/firstpost/</loc>
+		<loc>https://ckm.org.rsblog/firstpost/</loc>
 		<lastmod>2025-01-22</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://ckm-cyan.vercel.app/about/</loc>
+		<loc>https://ckm.org.rsabout/</loc>
 		<lastmod>2025-06-19</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://ckm-cyan.vercel.app/gallery/</loc>
+		<loc>https://ckm.org.rsgallery/</loc>
 		<lastmod>2025-06-19</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://ckm-cyan.vercel.app/blog/</loc>
+		<loc>https://ckm.org.rsblog/</loc>
 		<lastmod>2025-06-19</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://ckm-cyan.vercel.app/</loc>
+		<loc>https://ckm.org.rs</loc>
 		<lastmod>2025-06-19</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://ckm-cyan.vercel.app/tags/</loc>
+		<loc>https://ckm.org.rstags/</loc>
 		<lastmod>2025-06-19</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://ckm-cyan.vercel.app/feed/feed.xml</loc>
+		<loc>https://ckm.org.rsfeed/feed.xml</loc>
 		<lastmod>2025-06-20</lastmod>
 	</url>
 </urlset>
