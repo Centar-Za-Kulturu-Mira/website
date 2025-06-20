@@ -7,7 +7,7 @@ backend:
   repo: Centar-Za-Kulturu-Mira/website
   branch: main
 
-site_url: https://ckm.org.rs
+site_url: https://lambent-sfogliatella-4d3113.netlify.app/
 
 # This setting enables the full editorial workflow, including drafts and publishing.
 # It's required for the GitHub backend with Netlify Identity.
