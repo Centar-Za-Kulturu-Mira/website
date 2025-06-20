@@ -3,12 +3,180 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Centar Za Kulturu Mira</title>
-		<meta name="description" content="Naša Internet kuća za Centar Za Kulturu Mira">
+		<title>Test for making new text posts</title>
+		<meta name="description" content="Description of file">
 		<link rel="alternate" href="feed/feed.xml" type="application/atom+xml" title="Centar Za Kulturu Mira">
 		<link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
 		
-		<style>/* This is an arbitrary CSS string added to the bundle */
+		<style>/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	background: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #8292a2;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+	color: #e6db74;
+}
+
+.token.keyword {
+	color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+/*
+ * New diff- syntax
+ */
+
+pre[class*="language-diff-"] {
+	--eleventy-code-padding: 1.25em;
+	padding-left: var(--eleventy-code-padding);
+	padding-right: var(--eleventy-code-padding);
+}
+.token.deleted {
+	background-color: hsl(0, 51%, 37%);
+	color: inherit;
+}
+.token.inserted {
+	background-color: hsl(126, 31%, 39%);
+	color: inherit;
+}
+
+/* Make the + and - characters unselectable for copy/paste */
+.token.prefix.unchanged,
+.token.prefix.inserted,
+.token.prefix.deleted {
+	-webkit-user-select: none;
+	user-select: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.token.prefix.inserted,
+.token.prefix.deleted {
+	width: var(--eleventy-code-padding);
+	background-color: rgba(0,0,0,.2);
+}
+
+/* Optional: full-width background color */
+.token.inserted:not(.prefix),
+.token.deleted:not(.prefix) {
+	display: block;
+	margin-left: calc(-1 * var(--eleventy-code-padding));
+	margin-right: calc(-1 * var(--eleventy-code-padding));
+	text-decoration: none; /* override del, ins, mark defaults */
+	color: inherit; /* override del, ins, mark defaults */
+}
+/* This is an arbitrary CSS string added to the bundle */
 /* Defaults */
 :root {
 	--font-family: -apple-system, system-ui, sans-serif;
@@ -336,7 +504,7 @@ header {
 				<ul class="nav">
 					<li class="nav-item"><a href="/">Home</a></li>
 					<li class="nav-item"><a href="/blog/">Program</a></li>
-					<li class="nav-item"><a href="/about/" aria-current="page">O nama</a></li>
+					<li class="nav-item"><a href="/about/">O nama</a></li>
 					<li class="nav-item"><a href="/gallery/">Galerija</a></li>
 					<li class="nav-item"><a href="/feed/feed.xml">RSS</a></li>
 				</ul>
@@ -346,35 +514,23 @@ header {
 		<main id="skip">
 			<heading-anchors>
 				
+<h1 id="test-for-making-new-text-posts">Test for making new text posts</h1>
 
-
-<h1 id="o-nama">O nama</h1>
-<p>Centar za kulturu mira je neprofitna organizacija posvećena izgradnji mira i razumevanja među različitim zajednicama u našem društvu. Osnovani 2015. godine, naš centar služi kao most između različitih kultura, tradicija i generacija.</p>
-<h2 id="nasa-misija">Naša Misija</h2>
-<p>Kroz edukativne programe, kulturne razmene i društvene inicijative, radimo na stvaranju inkluzivnog društva gde se različitosti slave i gde dijalog zamenjuje konflikt. Naši programi uključuju:</p>
-<ul>
-<li>Radionice međukulturnog dijaloga</li>
-<li>Umetničke programe za mlade</li>
-<li>Seminare o nenasilnoj komunikaciji</li>
-<li>Medijaciju u lokalnoj zajednici</li>
-<li>Programe pomirenja</li>
+<ul class="post-metadata">
+	<li><time datetime="2025-06-20">20 June 2025</time></li>
+	<li><a href="/tags/test/" class="post-tag">test</a>, </li>
+	<li><a href="/tags/cms/" class="post-tag">cms</a></li>
 </ul>
-<h2 id="programi-u-zajednici">Programi u Zajednici</h2>
-<p>Posebno smo ponosni na naš rad sa mladima kroz kreativne radionice i programe mentorstva. Svake godine, više od 500 mladih ljudi učestvuje u našim aktivnostima, učeći o važnosti mira, tolerancije i međusobnog razumevanja.</p>
-<h2 id="nas-tim">Naš Tim</h2>
-<p>Naš tim čine stručnjaci iz različitih oblasti - od socijalnih radnika do umetnika i edukatora. Zajedno radimo na stvaranju prostora gde se mir ne samo promoviše, već i aktivno živi kroz svakodnevne interakcije.</p>
 
+<p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</p>
+<p><strong>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</strong></p>
+<p><strong>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. <em>Iaculis</em> massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</strong></p>
+<p>Lorem ipsum dolor sit amet c<em>onsectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</em></p>
+<p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</p>
 
-<style>
-  .homepage-hero {
-    margin: -2rem -1rem 2rem;
-  }
-  .hero-image {
-    width: 50% !important;
-    height: 400px;
-    object-fit: cover;
-  }
-</style>
+<ul class="links-nextprev"><li class="links-nextprev-prev">← Previous<br> <a href="/blog/firstpost/">Početak.</a></li>
+</ul>
+
 			</heading-anchors>
 		</main>
 
@@ -388,7 +544,7 @@ header {
 			</p>
 		</footer>
 
-		<!-- This page `/about/` was built on 2025-06-20T17:54:19.627Z -->
+		<!-- This page `/blog/test-for-making-new-text-posts/` was built on 2025-06-20T17:54:19.625Z -->
 		<script type="module" src="/dist/PQuipxb2GV.js"></script>
 
 		<script>
