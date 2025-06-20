@@ -3,7 +3,8 @@
 # Specifies the backend. In this case, it's your GitHub repository.
 # The 'main' branch is specified, but you can change it to 'master' if that's your default.
 backend:
-  name: git-getaway
+  name: github
+  repo: Centar-Za-Kulturu-Mira/website
   branch: main
 
 site_url: https://ckm.org.rs
