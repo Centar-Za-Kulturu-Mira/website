@@ -5,7 +5,7 @@
 backend:
   name: github
   repo: Centar-Za-Kulturu-Mira/website
-  branch: cms
+  branch: main
 
 # This setting enables the full editorial workflow, including drafts and publishing.
 # It's required for the GitHub backend with Netlify Identity.
