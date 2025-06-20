@@ -7,7 +7,6 @@ backend:
   repo: Centar-Za-Kulturu-Mira/website
   branch: main
 
-site_url: lambent-sfogliatella-4d3113.netlify.app
 site_url: ckm.org.rs
 
 # This setting enables the full editorial workflow, including drafts and publishing.
