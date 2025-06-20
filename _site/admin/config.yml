@@ -6,7 +6,7 @@ backend:
   name: git-getaway
   branch: main
 
-site_url: ckm.org.rs
+site_url: https://ckm.org.rs
 
 # This setting enables the full editorial workflow, including drafts and publishing.
 # It's required for the GitHub backend with Netlify Identity.
