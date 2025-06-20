@@ -3,8 +3,7 @@
 # Specifies the backend. In this case, it's your GitHub repository.
 # The 'main' branch is specified, but you can change it to 'master' if that's your default.
 backend:
-  name: github
-  repo: Centar-Za-Kulturu-Mira/website
+  name: git-gateway
   branch: main
 
 site_url: https://lambent-sfogliatella-4d3113.netlify.app/
